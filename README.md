@@ -18,7 +18,3 @@ Open `index.html` directly in a browser. No build tools, server, or dependencies
 - Transaction receipts with customization details and QR-style receipt marker
 - Personalized morning recommendations
 - Admin console with ingredient stock, refill registration, bin levels, and event logs
-
-## Prototype note
-
-This is a front-end demonstration. Account data, recipes, stock changes, payments, and transactions are simulated in memory and reset when the page is reloaded.
