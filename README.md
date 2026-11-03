@@ -2,7 +2,7 @@
 
 ## System Overview
 
-SmartBrew AI is an interactive browser prototype for a personalized IoT coffee machine used in an office or premium lounge. The interface lets a signed-in user browse drinks, customize a recipe, validate ingredient availability, pay for an order, receive a simulated dispensing status, and view a receipt. It also includes saved recipes, preference-based recommendations, and a technician dashboard for inventory and diagnostics.
+SmartBrew AI is an interactive browser prototype for a personalized coffee machine used in an office or premium lounge. The interface lets a signed-in user browse drinks, customize a recipe, validate ingredient availability, pay for an order, receive a simulated dispensing status, and view a receipt. It also includes saved recipes, preference-based recommendations, and a technician dashboard for inventory and diagnostics.
 
 The prototype focuses on the ten core functionalities selected from the Task A requirements. Account data, recipes, stock changes, payments, and transactions are simulated in the browser so the project can be demonstrated without a backend, database, payment provider, camera, or external API.
 
@@ -51,12 +51,12 @@ Use the following GUI walkthrough to demonstrate each requirement:
 6. **Place an order and simulate dispensing:** Add a drink to the order, select **Continue to checkout**, and choose **Pay and brew**. The confirmation dialog displays the dispensing status and order number, then changes to **Ready for collection**.
 7. **Simulated payment processing:** In checkout, test **Contactless card**, **Employee wallet**, or **Mobile wallet**. The selected payment method is shown in the completed receipt.
 8. **Receipts and transaction history:** After payment, select **View receipt**. Confirm that the receipt includes the transaction number, drink, custom settings, amount, payment method, email destination, and QR-style receipt marker.
-9. **Personalized recommendations:** Return to **Order coffee**. The **Morning boost** recommendation uses the signed-in user, time-of-day context, weather context, and preferred drink settings to highlight **Oat Latte** as **Best match**.
-10. **Administrator dashboard:** Select **Admin console**. Review ingredient stock, waste-bin and coffee-grounds capacity, machine health, and event logs. Select **Register refill** to reset the oat milk stock to 100%.
+9. **Personalized recommendations:** Return to **Order coffee**. The **Morning boost** recommendation uses the signed in user, time-of-day context, weather context, and preferred drink settings to highlight **Oat Latte** as **Best match**.
+10. **Administrator dashboard:** Select **Admin console**. Review ingredient stock, wastebin and coffee grounds capacity, machine health, and event logs. Select **Register refill** to reset the oat milk stock to 100%.
 
 ### Resetting the demonstration
 
-Reload `index.html` to reset recipes, stock levels, current orders, and simulated transactions to their initial in-memory state.
+Reload `index.html` to reset recipes, stock levels, current orders, and simulated transactions to their initial state.
 
 ## Demonstrated functionality
 
