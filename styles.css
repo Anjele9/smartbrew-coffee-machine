@@ -576,7 +576,7 @@ body {
   grid-template-columns: repeat(2,1fr);
   gap: 15px;
 }
-.recipe-card, .profile-card, .preferences-card, .stock-card, .diagnostics-card {
+.recipe-card, .profile-card, .preferences-card, .stock-card, .diagnostics-card, .history-card {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 12px;
@@ -632,6 +632,70 @@ body {
 }
 .profile-card p {
   font-size: 12px;
+}
+.profile-form {
+  margin-top: 20px;
+  text-align: left;
+}
+.profile-form label {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  margin: 12px 0;
+}
+.profile-form input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 6px;
+  padding: 9px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  font: inherit;
+}
+.profile-form .secondary-button {
+  width: 100%;
+  margin-top: 4px;
+}
+.small-modal label {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  margin: 18px 0;
+}
+.small-modal input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 7px;
+  padding: 11px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  font: inherit;
+}
+.form-error {
+  min-height: 16px;
+  color: #b94a48!important;
+}
+.history-card {
+  margin-top: 18px;
+}
+.history-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+  border-top: 1px solid var(--line);
+}
+.history-row span, .history-row small {
+  display: block;
+}
+.history-row small, .empty-history {
+  color: var(--muted);
+  font-size: 11px;
+  margin: 5px 0 0;
 }
 .preferences-card {
   max-width: 540px;

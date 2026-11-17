@@ -10,8 +10,8 @@ The prototype focuses on the ten core functionalities selected from the Task A r
 
 - Operating system: Windows, macOS, or Linux
 - Browser: a modern browser such as Chrome, Edge, Firefox, or Safari with JavaScript enabled
-- Runtime: no compiler, Node.js, Python, or other runtime is required
-- Libraries: none; the application uses plain HTML, CSS, and JavaScript
+- Runtime: no compiler or Node.js runtime is required; Python is optional if using the included local server command
+- Libraries: none; the application uses plain HTML, CSS, JavaScript modules, and a JSON catalog
 - External dependencies: none are required to run the prototype
 - Optional connection: `styles.css` imports the DM Sans and Fraunces fonts from Google Fonts. If the network is unavailable, the interface still runs using fallback fonts.
 
@@ -28,16 +28,17 @@ There is no compilation or package-install step.
 	```
 
 2. Open the project folder.
-3. Double-click `index.html`, or open it in a browser using **File > Open File**.
-4. The prototype loads on the **Order coffee** screen.
-
-An optional local server can also be used from the project folder:
+3. Start a local static server from the `CoffeeApp` folder:
 
 ```text
 python -m http.server 4173
 ```
 
-Then visit `http://localhost:4173`. This server is not required for the application.
+4. Visit `http://localhost:4173` in a browser.
+5. The prototype loads on the **Order coffee** screen.
+
+The local server is required because the application uses native JavaScript modules. Opening
+`index.html` directly with `file://` can cause browsers to block module imports.
 
 ### Test the 10 functionalities
 
@@ -52,11 +53,11 @@ Use the following GUI walkthrough to demonstrate each requirement:
 7. **Simulated payment processing:** In checkout, test **Contactless card**, **Employee wallet**, or **Mobile wallet**. The selected payment method is shown in the completed receipt.
 8. **Receipts and transaction history:** After payment, select **View receipt**. Confirm that the receipt includes the transaction number, drink, custom settings, amount, payment method, email destination, and QR-style receipt marker.
 9. **Personalized recommendations:** Return to **Order coffee**. The **Morning boost** recommendation uses the signed in user, time-of-day context, weather context, and preferred drink settings to highlight **Oat Latte** as **Best match**.
-10. **Administrator dashboard:** Select **Admin console**. Review ingredient stock, wastebin and coffee grounds capacity, machine health, and event logs. Select **Register refill** to reset the oat milk stock to 100%.
+10. **Administrator dashboard:** Select **Admin console**, enter technician PIN `1048`, and review ingredient stock, wastebin and coffee grounds capacity, machine health, and event logs. Select **Register refill** to reset the oat milk stock to 100%.
 
 ### Resetting the demonstration
 
-Reload `index.html` to reset recipes, stock levels, current orders, and simulated transactions to their initial state.
+The profile, saved recipes, stock levels, and completed transactions persist in browser local storage. To reset the demonstration, clear site data for the local server origin in the browser developer tools, then reload the application.
 
 ## Demonstrated functionality
 
@@ -70,3 +71,6 @@ Reload `index.html` to reset recipes, stock levels, current orders, and simulate
 - Transaction receipts with customization details and QR-style receipt marker
 - Personalized morning recommendations
 - Admin console with ingredient stock, refill registration, bin levels, and event logs
+- Browser-persisted profile, recipes, transactions, and stock state
+- Dynamic recommendations based on time of day, preferences, availability, and order history
+- Catalog and machine defaults loaded from `data/catalog.json`, separate from application behavior
